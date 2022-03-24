@@ -1,6 +1,6 @@
-Logguin-MVC :bowtie: 
+Login-MVC :bowtie: 
 =============
-:punch: Sistema de Logguin MVC diseñado con PHP, MYSQL, Bootstrap y libreria de sweetalert
+:punch: Sistema de Login MVC diseñado con PHP, MYSQL, Bootstrap y libreria de sweetalert
 
 - Lenguaje de Diseño PHP;
 - Base de datos Mysql;
