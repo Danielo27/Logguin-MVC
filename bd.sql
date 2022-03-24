@@ -12,8 +12,8 @@ CREATE TABLE user_lg(
 
 CREATE TABLE loggin_lg(
     id_lg INT,
-    mail_lg VARCHAR(45),
-    password_lg VARCHAR(100),
+    mail_lg VARCHAR(45) NOT NULL UNIQUE,
+    password_lg VARCHAR(100) NOT NULL,
     FOREIGN KEY (id_lg) REFERENCES user_lg(id_usr)
 );
 
