@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaz Principal</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="37" height="31" fill="currentColor"
+                        class="bi bi-house-door" viewBox="0 0 16 16">
+                        <path
+                            d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z" />
+                    </svg>
+                    Pagina Principal
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <section style="margin: 10px;">
+        <div class="card text-center">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" id='home_btn' onclick="changeOption('home','home_btn')"
+                            aria-current="true" href="#">Principal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="loggin_btn" onclick="changeOption('loggin','loggin_btn')">Inicio Sesion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="register_btn"
+                            onclick="changeOption('register','register_btn')">Registrarme</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card-body">
+                <div id="home">
+                    <h5 class="card-title">Bienvenido</h5>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo accusamus suscipit optio
+                        soluta consequuntur facere, <br>
+                        molestias, consequatur porro adipisci harum dolores quis id natus, eaque perspiciatis! Vitae in
+                        quas beatae.
+                    </p>
+                    <a onclick="changeOption('loggin','loggin_btn')" class="btn btn-primary">Inciar Sesion</a>
+                </div>
+
+                <div id="loggin" style="display: none;">
+                    <form action="" method="POST">
+                        <div class="mb-3 row">
+                            <label for="inputPassword" class="col-sm-2 col-form-label">Correo Electronico: </label>
+                            <div class="col-sm-10">
+                                <input type="mail" class="form-control" placeholder="Ingrese Correo">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="inputPassword" class="col-sm-2 col-form-label">Contraseña: </label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" placeholder="Ingrese Contraseña">
+                            </div>
+                        </div>
+                        <input type="submit" value="Iniciar Sesion" class="btn btn-success">
+                    </form>
+                </div>
+
+                <div id="register" style="display: none;">
+                    <form action="" method="POST">
+                        <div class="mb-3 row">
+                            <label class="col-sm-2 col-form-label">Nombres: </label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Ingrese Nombres" name="name"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label class="col-sm-2 col-form-label">Apellidos: </label>
+                            <div class="col-sm-10">
+                                <input type="mail" class="form-control" placeholder="Ingrese Apellidos" name="surname"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label class="col-sm-2 col-form-label">Telefono: </label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Ingrese Telefono" name="phone"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label class="col-sm-2 col-form-label">Correo Electronico: </label>
+                            <div class="col-sm-10">
+                                <input type="mail" class="form-control" placeholder="Ingrese Correo" name="mail"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label class="col-sm-2 col-form-label">Contraseña: </label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" placeholder="Ingrese Contraseña"
+                                    name="password" required>
+                            </div>
+                        </div>
+                        <input type="submit" value="Registrarme" class="btn btn-primary">
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class=" card container-fluid bg-light" style="position:absolute; bottom: 0%; padding: 10px; text-align: center;">
+        <h6>Hecho Por Daniel Quintero Henriquez</h6>
+        <small>Todos Los derechos Reservados 2022</small>
+        <a href="https://www.facebook.com/Daniel-Quintero-Henriquez-100423628799045">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                </svg>
+            </a>
+    </footer>
+
+</body>
+<script src="js/app.js" type="text/javascript"></script>
+<script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/popper.min.js" type="text/javascript"></script>
+<script src="js/sweetalert2.all.min.js" type="text/javascript"></script>
+
+</html>
